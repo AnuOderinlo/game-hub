@@ -2,9 +2,10 @@ import Axios from "../services/api-clients";
 import { AxiosError } from "axios";
 import { useState, useEffect } from "react";
 
-interface GamesRes {
+export interface GamesRes {
   id: number;
   name: string;
+  background_image: string;
 }
 
 const useGames = (url: string) => {
