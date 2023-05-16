@@ -18,6 +18,7 @@ export interface GamesRes {
 const useGames = (url: string) => {
   const [games, setGames] = useState<GamesRes[]>([]);
   const [error, setError] = useState("");
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     const getGames = async () => {
@@ -26,14 +27,16 @@ const useGames = (url: string) => {
         const { results } = data;
 
         setGames(results);
+        setLoading(false);
       } catch (err) {
         setError((err as AxiosError).message);
+        setLoading(false);
       }
     };
     getGames();
   }, []);
 
-  return { games, error };
+  return { games, error, isLoading };
 };
 
 export default useGames;
