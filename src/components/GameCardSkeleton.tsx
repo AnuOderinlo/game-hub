@@ -6,7 +6,7 @@ import PlatformIconsList from "./PlatformIconsList";
 
 const GameCardSkeleton = () => {
   return (
-    <Card width="320px" borderRadius={10} overflow="hidden">
+    <Card>
       <Skeleton height="200px" />
       <CardBody>
         <SkeletonText />
