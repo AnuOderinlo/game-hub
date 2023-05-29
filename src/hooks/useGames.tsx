@@ -1,6 +1,3 @@
-import Axios from "../services/api-clients";
-import { AxiosError } from "axios";
-import { useState, useEffect } from "react";
 import useData from "./useData";
 
 export interface Platform {
