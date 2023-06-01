@@ -1,12 +1,12 @@
 import React from "react";
-import { GamesRes } from "../hooks/useGames";
+import { dataRes } from "../hooks/useData";
 import { Card, CardBody, HStack, Heading, Image, Text } from "@chakra-ui/react";
 import PlatformIconsList from "./PlatformIconsList";
 import CriticScore from "./CriticScore";
 import getCroppedImages from "../services/getCroppedImages";
 
 interface Props {
-  game: GamesRes;
+  game: dataRes;
 }
 
 const GameCard = ({ game }: Props) => {
